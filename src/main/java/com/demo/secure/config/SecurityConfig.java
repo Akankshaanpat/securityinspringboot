@@ -33,7 +33,7 @@ public class SecurityConfig {
 	UserDetailsService userDetailsService() {
 		UserDetails admin = User.withUsername("akanksha").password(passwordEncoder().encode("aviii")).roles("ADMIN").build();
 		UserDetails user = User.withUsername("avishkar").password(passwordEncoder().encode("akii")).roles("USER").build();
-		return new InMemoryUserDetailsManager(admin, user);
+		return new InMemoryUserDetailsManager(admin, users);
 
 	}
 
